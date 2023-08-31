@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 void main() {
   // declaração normal
   List<int> listNumeros = [1, 2, 3];

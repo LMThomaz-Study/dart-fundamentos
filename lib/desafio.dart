@@ -49,13 +49,16 @@ void main() {
   }
 
   for (var proficao in profissoes) {
-    print('   $proficao');
-
-    pacientes.where((pacient) {
+    final pacientesDaProfissao = pacientes.where((pacient) {
       final dadosPacient = pacient.split('|');
       final proficaoPacient = dadosPacient[2].toLowerCase();
       return proficaoPacient == proficao;
-    }).forEach((pacient) {
+    }).toList();
+
+    print(
+        '   $proficao - ${pacientesDaProfissao.length} paciente${pacientesDaProfissao.length < 2 ? '' : 's'}');
+
+    pacientesDaProfissao.forEach((pacient) {
       final dadosPacient = pacient.split('|');
       final nomePacient = dadosPacient[0];
       print('      $nomePacient');

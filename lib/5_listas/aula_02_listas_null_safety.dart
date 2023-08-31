@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 void main() {
   // ? -> Nullable (aceita nulo)
   // Sem nada -> non-null (não aceita nulo)
